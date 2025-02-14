@@ -147,3 +147,5 @@ function resetErrorMessages() {
   let errorInputs = document.querySelectorAll(".input-error");
   errorInputs.forEach((input) => input.classList.remove("input-error")); // Remueve clase de error de inputs (opcional)
 }
+
+AOS.init();

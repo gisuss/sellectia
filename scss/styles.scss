@@ -27,7 +27,7 @@ html {
     position: sticky;
     z-index: 999;
     top: 0;
-    box-shadow: 0px 74px 70px -20px rgba(0,0,0,1);
+    box-shadow: 0px 74px 70px -25px rgba(0,0,0,1);
     overflow: hidden;
 
     .logo img {
@@ -251,11 +251,11 @@ html {
 
 .proyectos {
     position: relative;
-
+    
     .proyectos-hero {
+        padding-top: 6rem;
         background: #0f0f54;
         position: relative;
-        z-index: 10;
 
         .title {
             color: white;
@@ -264,17 +264,18 @@ html {
             font-size: 1.75rem;
             text-transform: uppercase;
             font-weight: bold;
+            z-index: 14;
+            position: relative;
         }
     }
 
     .proyectos-imagen-fondo {
         position: absolute;
-        top: -50%;
-        bottom: -50%;
+        top: -30%;
         left: 40%;
-        width: 250px;
+        width: 300px;
         height: auto;
-        opacity: 0.5;
+        opacity: 0.9;
         z-index: 11;
         object-fit: cover;
         object-position: center center;

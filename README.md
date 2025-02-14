@@ -57,7 +57,7 @@ git push -u origin main
 
 Lo siguiente fue subir esta primera versión del proyecto a [Vercel] lo cual generó el siguiente enlace del proyecto en [produccion].
 
-## Decisiones de diseño tomadas y herramientas utilizadas
+## Decisiones de diseño y herramientas utilizadas
 
 Durante la maquetación del proyecto surgieron diversos casos especiales los cuales resumiré en la siguiente tabla:
 
@@ -66,6 +66,7 @@ Durante la maquetación del proyecto surgieron diversos casos especiales los cua
 | Uso de ```grid``` y ```grid-template-areas``` | En gran parte del proyecto usé grid por sus bondades y prácticidad al momento de estructurar el responsive. |
 | Carrusel | Mejora visual: en formato móvil, cambié la orientación de la cortina roja. |
 | Swiper [autoplay-progress] | Decidí emplear este carrusel [autoplay-progress] por su diseño único y amigable. |
+| Imagen flotante | Decidí ocultar la imagen flotante en dispositivos móviles ya que visualmente no encaja con el diseño. |
 | [AOS] | Decidí usar esta librería para las animaciones por su simple integración mediante CDN y efectos suaves y livianos. |
 | [SweetAlert] | Decidí usar esta librería porque es la más popular y sencilla de integrar. |
 | [Squoosh] | Excelente web para optimización de imagenes. |

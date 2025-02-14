@@ -57,17 +57,20 @@ git push -u origin main
 
 Lo siguiente fue subir esta primera versión del proyecto a [Vercel] lo cual generó el siguiente enlace del proyecto en [produccion].
 
-## Tomas de decisiones importantes
+## Decisiones de diseño tomadas y herramientas utilizadas
 
 Durante la maquetación del proyecto surgieron diversos casos especiales los cuales resumiré en la siguiente tabla:
 
 | Item | Descripción |
 | ------ | ------ |
-| Uso de ```grid``` y ```grid-template-areas``` | En ran parte del proyecto usé grid por sus bondades y prácticidad al momento de estructurar el responsive. |
-| Swiper autoplay progress | Decidí emplear este carrusel [autoplay-progress] por su diseño único. |
+| Uso de ```grid``` y ```grid-template-areas``` | En gran parte del proyecto usé grid por sus bondades y prácticidad al momento de estructurar el responsive. |
+| Swiper [autoplay-progress] | Decidí emplear este carrusel [autoplay-progress] por su diseño único y amigable. |
 | [AOS] | Decidí usar esta librería para las animaciones por su simple integración mediante CDN y efectos suaves y livianos. |
 | [SweetAlert] | Decidí usar esta librería porque es la más popular y sencilla de integrar. |
+| [Squoosh] | Excelente web para optimización de imagenes. |
 
+## Autor
+[![Contribuidores](https://contrib.rocks/image?repo=gisuss/sellectia&max=500&columns=20)](https://github.com/gisuss/sellectia/graphs/contributors)
 
 ## License
 
@@ -86,5 +89,3 @@ Durante la maquetación del proyecto surgieron diversos casos especiales los cua
    [produccion]: <https://sellectia.vercel.app>
    [autoplay-progress]: <https://swiperjs.com/demos#autoplay-progress>
    [SweetAlert]: <https://sweetalert2.github.io>
-   [AngularJS]: <http://angularjs.org>
-   [Gulp]: <http://gulpjs.com>

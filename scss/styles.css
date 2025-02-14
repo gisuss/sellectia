@@ -297,29 +297,29 @@ html body {
   grid-column: span 2;
 }
 
-.ads1 {
+.infobar1 {
   background-color: #c22424;
 }
-.ads1 .title {
+.infobar1 .title {
   color: #fff;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
-.ads1 .title a {
+.infobar1 .title a {
   color: #fff;
   text-decoration: underline;
 }
 
-.ads2 .title {
+.infobar2 .title {
   color: #E31837;
   text-align: center;
   padding: 1rem 0;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
-.ads2 .title a {
+.infobar2 .title a {
   color: #E31837;
   text-decoration: underline;
 }

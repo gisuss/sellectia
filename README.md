@@ -72,6 +72,8 @@ Durante la maquetación del proyecto surgieron diversos casos especiales los cua
 
 ## Validaciones de formulario
 
+Las validaciones de formulario aplicadas en este proyecto son las siguientes. Orientadas hacia aumentar la experiencia de usuario y la congruencia de la data enviada a través del formulario.
+
 | Campo (input) | Descripción |
 | ------ | ------ |
 | Nombre | Validación en tiempo real para que no permita ingresar números ni caracteres especiales mientras el usuario escribe. |

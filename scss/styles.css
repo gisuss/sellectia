@@ -13,7 +13,7 @@ html body {
 }
 
 .navbar {
-  background: #ffffff;
+  background: white;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 1rem 2rem;
   display: flex;
@@ -22,6 +22,7 @@ html body {
   position: sticky;
   z-index: 999;
   top: 0;
+  overflow: hidden;
 }
 .navbar .logo img {
   height: 40px;
@@ -75,7 +76,7 @@ html body {
   position: relative;
   text-align: center;
   font-size: 18px;
-  background: #fff;
+  background: white;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -143,7 +144,7 @@ html body {
 .servicios {
   padding: 6rem 8rem 8rem;
   text-align: center;
-  background: #ffffff;
+  background: white;
 }
 .servicios .servicios-grid {
   display: grid;
@@ -193,8 +194,8 @@ html body {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: #fff;
-  color: #c22424;
+  background-color: white;
+  color: #E31837;
   font-weight: bold;
   z-index: 1;
   border: 1px solid white;
@@ -228,7 +229,7 @@ html body {
   z-index: 10;
 }
 .proyectos .proyectos-hero .title {
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 4rem 0;
   font-size: 1.75rem;
@@ -253,10 +254,10 @@ html body {
 .clientes {
   padding: 8rem 1rem 6rem;
   text-align: center;
-  background: linear-gradient(to bottom, #fff, #E31837, #E31837, #E31837);
+  background: linear-gradient(to bottom, white, #E31837, #E31837, #E31837);
 }
 .clientes .clientes-hero .title {
-  color: #fff;
+  color: white;
   text-align: center;
   padding: 3rem 0;
   font-size: 1.25rem;
@@ -303,21 +304,24 @@ html body {
   background-color: #c22424;
 }
 .infobar1 .title {
-  color: #fff;
+  color: white;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
 .infobar1 .title a {
-  color: #fff;
+  color: white;
   text-decoration: underline;
+}
+.infobar1 .title a:hover {
+  color: #951326;
 }
 
 .infobar2 .title {
   color: #E31837;
   text-align: center;
-  padding: 1rem 0;
+  padding: 1rem;
   font-size: 0.9rem;
   text-transform: uppercase;
 }
@@ -325,12 +329,15 @@ html body {
   color: #E31837;
   text-decoration: underline;
 }
+.infobar2 .title a:hover {
+  color: #951326;
+}
 
 .formulario {
   background-color: #E31837;
   color: white;
   padding: 6rem 4rem;
-  border-top: #fff 3px solid;
+  border-top: white 3px solid;
 }
 .formulario .formulario-container {
   max-width: 1000px;
@@ -428,7 +435,7 @@ html body {
   border: none;
   border-radius: 8px;
   background-color: white;
-  color: red;
+  color: #E31837;
   width: 100%;
   box-sizing: border-box;
 }
@@ -437,12 +444,12 @@ html body {
   outline: none;
 }
 .formulario .formulario-input::-moz-placeholder, .formulario .formulario-textarea::-moz-placeholder {
-  color: rgba(255, 0, 0, 0.7);
+  color: rgba(227, 24, 55, 0.7);
   font-weight: bold;
 }
 .formulario .formulario-input::placeholder,
 .formulario .formulario-textarea::placeholder {
-  color: rgba(255, 0, 0, 0.7);
+  color: rgba(227, 24, 55, 0.7);
   font-weight: bold;
 }
 .formulario .formulario-textarea {
@@ -597,7 +604,7 @@ footer .footer-col-7:last-child {
   margin-right: 0;
 }
 footer .footer-row-2 .footer-col-7 .social a {
-  color: #fff;
+  color: white;
   font-size: 1.2rem;
   transition: opacity 0.3s;
 }
@@ -621,12 +628,12 @@ footer ul li {
 }
 footer ul li a {
   text-decoration: none;
-  color: #fff;
+  color: white;
   display: block;
   padding: 5px 0;
 }
 footer ul li a:hover {
-  color: #fff;
+  color: white;
 }
 footer .payment-logos {
   display: flex;
@@ -636,7 +643,7 @@ footer .payment-logos a {
   display: inline-block;
   width: 50px;
   height: 30px;
-  background-color: #fff;
+  background-color: white;
   border: 1px solid #ccc;
   border-radius: 5px;
   line-height: 30px;
@@ -653,7 +660,7 @@ footer .payment-logos a {
     bottom: -100%;
     left: 0;
     width: 100%;
-    height: calc(100vh - 400px);
+    height: calc(100vh - 450px);
     background: white;
     flex-direction: column;
     align-items: center;

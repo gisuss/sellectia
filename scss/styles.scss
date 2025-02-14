@@ -20,7 +20,9 @@ html {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: relative;
+    position: sticky;
+    z-index: 999;
+    top: 0;
 
     .logo img {
         height: 40px;
@@ -757,10 +759,12 @@ footer {
 
         .menu {
             position: fixed;
-            top: 70px;
-            left: -100%;
+            // top: 127px;
+            bottom: -100%;
+            left: 0;
+            // left: -100%;
             width: 100%;
-            height: calc(100vh - 70px);
+            height: calc(100vh - 400px);
             background: white;
             flex-direction: column;
             align-items: center;
@@ -769,7 +773,8 @@ footer {
             z-index: 1000;
 
             &.active {
-                left: 0;
+                bottom: 0;
+                // left: 0;
             }
         }
 

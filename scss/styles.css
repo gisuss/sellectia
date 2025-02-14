@@ -743,7 +743,11 @@ footer .payment-logos a {
     grid-template-areas: "titulo" "feliz" "rico" "avion" "dormir" "privacidad" "submit";
   }
   .swiper-slide .slide-text-container {
-    width: 50% !important;
+    width: 100% !important;
+    height: 50% !important;
+    bottom: 0 !important;
+    top: auto !important;
+    background: linear-gradient(to top, #E31837, transparent) !important;
   }
   .swiper-slide .slide-text-container .slide-text {
     font-size: 2rem;

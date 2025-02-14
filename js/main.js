@@ -1,3 +1,4 @@
+// Navbar
 document.addEventListener("DOMContentLoaded", () => {
   const hamburger = document.querySelector(".hamburger");
   const menu = document.querySelector(".menu");
@@ -56,12 +57,10 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
   });
 });
 
-document
-  .getElementById("miFormulario")
-  .addEventListener("submit", function (event) {
-    event.preventDefault(); // Prevenir envío normal del formulario
+// Formulario
+document.getElementById("miFormulario").addEventListener("submit", function (event) {
+    event.preventDefault();
 
-    // Resetear mensajes de error previos
     resetErrorMessages();
 
     let nombre = document.getElementById("nombre").value.trim();
@@ -72,10 +71,12 @@ document
 
     let isValid = true;
 
-    // Validar Nombre (no vacío y solo letras y espacios)
     if (!nombre) {
       isValid = false;
       mostrarError("nombre", "El nombre es obligatorio.");
+    } else if (nombre.length > 255) {
+      isValid = false;
+      mostrarError("nombre", "El nombre no puede superar los 255 caracteres.");
     } else if (!/^[a-zA-Z\s]+$/.test(nombre)) {
       isValid = false;
       mostrarError(
@@ -84,7 +85,6 @@ document
       );
     }
 
-    // Validar Email (formato de email válido)
     if (!email) {
       isValid = false;
       mostrarError("email", "El email es obligatorio.");
@@ -93,30 +93,46 @@ document
       mostrarError("email", "El email no tiene un formato válido.");
     }
 
-    // Validar Teléfono (opcional - solo ejemplo de formato numérico básico)
-    if (telefono && !/^[0-9\s+-]*$/.test(telefono)) {
-      // Permite números, espacios, +, -
+    if (telefono) {
+      const telefonoRegex = /^[0-9+()\s-]*$/;
+      if (!telefonoRegex.test(telefono)) {
+        isValid = false;
+        mostrarError(
+          "telefono",
+          "Introduce un teléfono válido (solo números, +, (), espacios y -)."
+        );
+      }
+    }
+
+    const planetasValidos = [
+      "mercurio",
+      "venus",
+      "tierra",
+      "marte",
+      "jupiter",
+      "saturno",
+      "urano",
+      "neptuno",
+      "plutón",
+    ];
+
+    if (!planeta) {
+      isValid = false;
+      mostrarError("planeta", "El planeta de nacimiento es obligatorio.");
+    } else if (!planetasValidos.includes(planeta.toLowerCase())) {
       isValid = false;
       mostrarError(
-        "telefono",
-        "El teléfono solo puede contener números, espacios, + y -."
+        "planeta",
+        "Introduce un planeta válido de nuestro sistema solar."
       );
     }
 
-    // Validar Planeta (opcional - no vacío, podrías añadir validaciones específicas si es necesario)
-    if (!planeta) {
-      isValid = false;
-      mostrarError("planeta", "El planeta de nacimiento es obligatorio."); // Opcional: si planeta es obligatorio
-    }
-
-    // Validar Checkbox de Privacidad (debe estar marcado)
     if (!privacidadCheckbox.checked) {
       isValid = false;
       mostrarError("privacidad", "Debes aceptar la política de privacidad.");
     }
 
     if (isValid) {
-      // Simulación de envío exitoso (solo si todas las validaciones pasan)
       setTimeout(function () {
         Swal.fire({
           icon: "success",
@@ -130,22 +146,56 @@ document
         });
       }, 500);
     }
-  });
+});
+
+function mostrarError(campoId, mensaje) {
+  let campo = document.getElementById(campoId);
+  let mensajeError = document.createElement("div");
+  mensajeError.className = "mensaje-error";
+  mensajeError.textContent = mensaje;
+
+  campo.parentNode.insertBefore(mensajeError, campo.nextSibling);
+  campo.classList.add("error-input");
+}
+
+function resetErrorMessages() {
+  let errorMessages = document.querySelectorAll(".mensaje-error");
+  errorMessages.forEach((message) => message.remove());
+
+  let errorInputs = document.querySelectorAll(".error-input");
+  errorInputs.forEach((input) => input.classList.remove("error-input"));
+}
+
+const nombreInput = document.getElementById("nombre");
+
+nombreInput.addEventListener("input", function (event) {
+  let valorInput = event.target.value;
+  let valorValidado = "";
+
+  for (let i = 0; i < valorInput.length; i++) {
+    let caracter = valorInput[i];
+    if (/[a-zA-Z\s]/.test(caracter)) {
+      valorValidado += caracter;
+    }
+  }
+  event.target.value = valorValidado;
+});
 
 function mostrarError(campoId, mensaje) {
   let campo = document.getElementById(campoId);
   let errorSpan = document.createElement("span");
   errorSpan.className = "error-message";
   errorSpan.textContent = mensaje;
-  campo.parentNode.insertBefore(errorSpan, campo.nextSibling); // Inserta el span de error después del input
-  campo.classList.add("input-error"); // Añade clase para estilo visual de error en el input (opcional)
+  campo.parentNode.insertBefore(errorSpan, campo.nextSibling);
+  campo.classList.add("input-error");
 }
 
 function resetErrorMessages() {
   let errorMessages = document.querySelectorAll(".error-message");
-  errorMessages.forEach((message) => message.remove()); // Elimina todos los mensajes de error
+  errorMessages.forEach((message) => message.remove());
   let errorInputs = document.querySelectorAll(".input-error");
-  errorInputs.forEach((input) => input.classList.remove("input-error")); // Remueve clase de error de inputs (opcional)
+  errorInputs.forEach((input) => input.classList.remove("input-error"));
 }
 
+// AOS
 AOS.init();

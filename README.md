@@ -64,10 +64,20 @@ Durante la maquetación del proyecto surgieron diversos casos especiales los cua
 | Item | Descripción |
 | ------ | ------ |
 | Uso de ```grid``` y ```grid-template-areas``` | En gran parte del proyecto usé grid por sus bondades y prácticidad al momento de estructurar el responsive. |
+| Carrusel | Mejora visual: en formato móvil, cambié la orientación de la cortina roja. |
 | Swiper [autoplay-progress] | Decidí emplear este carrusel [autoplay-progress] por su diseño único y amigable. |
 | [AOS] | Decidí usar esta librería para las animaciones por su simple integración mediante CDN y efectos suaves y livianos. |
 | [SweetAlert] | Decidí usar esta librería porque es la más popular y sencilla de integrar. |
 | [Squoosh] | Excelente web para optimización de imagenes. |
+
+## Validaciones de formulario
+
+| Campo (input) | Descripción |
+| ------ | ------ |
+| Nombre | Validación en tiempo real para que no permita ingresar números ni caracteres especiales mientras el usuario escribe. |
+| Email | Validación de formato válido. |
+| Teléfono | Solo valores numéricos de teléfonos válidos. |
+| Planeta de nacimiento | Empleé el uso de datalist con los nombres de los planetas del sistema solar. Esto mejora la experiencia del usuario. |
 
 ## Autor
 [![Contribuidores](https://contrib.rocks/image?repo=gisuss/sellectia&max=500&columns=20)](https://github.com/gisuss/sellectia/graphs/contributors)

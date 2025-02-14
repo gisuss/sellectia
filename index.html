@@ -2,7 +2,10 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"
+    />
     <title>Impacta! - Home</title>
     <link
       href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
@@ -17,12 +20,14 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
   <body>
-    <section class="ads1">
+    <section id="inicio" class="ads1">
       <p class="title">
-        Más publicidad! <strong>SUBSCRÍBETE A NUESTRA NEWSLETTER </strong> &nbsp;
-        <a href="#" style="text-transform: lowercase;">Click aquí</a>
+        Más publicidad!
+        <strong>SUBSCRÍBETE A NUESTRA NEWSLETTER </strong> &nbsp;
+        <a href="#" style="text-transform: lowercase">Click aquí</a>
       </p>
     </section>
 
@@ -40,7 +45,7 @@
         <li><a href="#nosotros">Nosotros</a></li>
         <li><a href="#servicios">Servicios</a></li>
         <li><a href="#proyectos">Proyectos</a></li>
-        <li><a href="#contacto">Contacto</a></li>
+        <li><a href="#formulario">Contacto</a></li>
       </ul>
 
       <div class="social">
@@ -59,15 +64,46 @@
       <div class="swiper-wrapper">
         <div class="swiper-slide">
           <img src="/assets/images/portada/edit1.webp" alt="Portada 1" />
+          <div class="slide-text-container">
+            <p class="slide-text">
+              A veces,<br />
+              somos<br />
+              gente<br />
+              normal
+            </p>
+          </div>
         </div>
         <div class="swiper-slide">
           <img src="/assets/images/portada/edit2.webp" alt="Portada 2" />
+          <div class="slide-text-container">
+            <p class="slide-text">
+              Creatividad<br />
+              sin límites<br />
+              para impulsar<br />
+              tu marca
+            </p>
+          </div>
         </div>
         <div class="swiper-slide">
           <img src="/assets/images/portada/edit3.webp" alt="Portada 3" />
+          <div class="slide-text-container">
+            <p class="slide-text">
+              Agilidad y eficiencia<br />
+              en cada<br />
+              proyecto
+            </p>
+          </div>
         </div>
         <div class="swiper-slide">
           <img src="/assets/images/portada/edit4.webp" alt="Portada 4" />
+          <div class="slide-text-container">
+            <p class="slide-text">
+              Equipo de<br />
+              expertos<br />
+              apasionados<br />
+              y dedicados
+            </p>
+          </div>
         </div>
       </div>
       <div class="swiper-pagination"></div>
@@ -95,6 +131,7 @@
               alt="Brain"
             />
           </div>
+          <div class="circle-container">1</div>
           <h3 class="servicio-titulo">
             Creatividad sin límites para impulsar tu marca
           </h3>
@@ -119,6 +156,7 @@
               alt="Chincheta"
             />
           </div>
+          <div class="circle-container">2</div>
           <h3 class="servicio-titulo">
             Agilidad y eficiencia en cada proyecto
           </h3>
@@ -143,6 +181,7 @@
               alt="Chincheta"
             />
           </div>
+          <div class="circle-container">3</div>
           <h3 class="servicio-titulo">Tecnología para resultados óptimos</h3>
           <p class="servicio-descripcion">
             Innovación tecnológica para potenciar tus campañas publicitarias,
@@ -165,6 +204,7 @@
               alt="Chincheta"
             />
           </div>
+          <div class="circle-container">4</div>
           <h3 class="servicio-titulo">
             Equipo de expertos apasionados y dedicados
           </h3>
@@ -181,6 +221,11 @@
     </section>
 
     <section id="proyectos" class="proyectos">
+      <img
+        src="/assets/images/servicios/impactacom_Waiter_preparing_a_cocktail_from_which_a_lot_of_smok_39cc6042-3b3e-4264-91e6-3ddbb9f91152.webp"
+        class="proyectos-imagen-fondo"
+        alt=""
+      />
       <div class="proyectos-hero">
         <p class="title">Vendemos humo con mucha pasión</p>
       </div>
@@ -314,10 +359,160 @@
       </div>
     </section>
 
+    <section id="formulario" class="formulario">
+      <div class="formulario-container">
+        <p class="formulario-titulo"><strong>ENVÍANOS TU</strong> MENSAJE</p>
+        <form id="miFormulario" class="formulario-grid">
+          <!-- primera columna -->
+          <div class="formulario-columna formulario-columna--izquierda">
+            <div class="formulario-grid-anidado formulario-grid-anidado--izquierda">
+              <div class="formulario-campo formulario-campo--anidado">
+                <input
+                  type="text"
+                  id="nombre"
+                  name="nombre"
+                  class="formulario-input"
+                  placeholder="Nombre"
+                  required
+                />
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado">
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  class="formulario-input"
+                  placeholder="Email"
+                  required
+                />
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado">
+                <input
+                  type="tel"
+                  id="telefono"
+                  name="telefono"
+                  class="formulario-input"
+                  placeholder="Teléfono"
+                  required
+                />
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado">
+                <input
+                  type="text"
+                  id="planeta"
+                  name="planeta"
+                  class="formulario-input"
+                  placeholder="Planeta de nacimiento"
+                  required
+                />
+              </div>
+
+              <div class="formulario-campo formulario-campo--completo-anidado">
+                <textarea
+                  id="mensaje"
+                  name="mensaje"
+                  class="formulario-textarea"
+                  rows="5"
+                  placeholder="Mensaje"
+                  required
+                ></textarea>
+              </div>
+
+              <div class="formulario-campo formulario-campo--completo-anidado formulario-campo--centrado">
+                <p class="formulario-info">
+                  Sus datos serán tratados por IMPACTA para la atención de las
+                  consultas o solicitudes de información realizadas.
+                  Puede ejercer sus derechos conforme a lo dispuesto en la Política de Privacidad.
+                  <a href="#" class="formulario-link">Más información aquí</a>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- segunda columna -->
+          <div class="formulario-columna formulario-columna--derecha">
+            <div class="formulario-grid-anidado formulario-grid-anidado--derecha">
+              <div class="formulario-campo formulario-campo--completo-anidado formulario-campo--centrado">
+                <p class="formulario-label formulario-label--titulo-derecha">
+                  SELECCIONA SOLO <strong>UN RESULTADO</strong>
+                </p>
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado formulario-radio-item">
+                <input
+                  type="radio"
+                  id="feliz"
+                  name="resultado"
+                  value="feliz"
+                  class="formulario-radio-input"
+                />
+                <label for="feliz" class="formulario-radio-label">Quiero ser feliz</label>
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado formulario-radio-item">
+                <input
+                  type="radio"
+                  id="rico"
+                  name="resultado"
+                  value="rico"
+                  class="formulario-radio-input"
+                />
+                <label for="rico" class="formulario-radio-label">Quiero ser rico</label>
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado formulario-radio-item">
+                <input
+                  type="radio"
+                  id="avion"
+                  name="resultado"
+                  value="avion"
+                  class="formulario-radio-input"
+                />
+                <label for="avion" class="formulario-radio-label">Quiero ser un avión</label>
+              </div>
+
+              <div class="formulario-campo formulario-campo--anidado formulario-radio-item">
+                <input
+                  type="radio"
+                  id="dormir"
+                  name="resultado"
+                  value="dormir"
+                  class="formulario-radio-input"
+                />
+                <label for="dormir" class="formulario-radio-label">Quiero darmir todo el día</label>
+              </div>
+
+              <div class="formulario-campo formulario-campo--completo-anidado formulario-campo--checkbox">
+                <input
+                  type="checkbox"
+                  id="privacidad"
+                  name="privacidad"
+                  value="acepto"
+                  class="formulario-checkbox-input"
+                  required
+                />
+                <label for="privacidad" class="formulario-checkbox-label">He leído y acepto el
+                  <a href="#" class="formulario-link">aviso legal</a>
+                    y la <a href="#" class="formulario-link">politica de privacidad</a>
+                </label>
+              </div>
+
+              <div class="formulario-campo formulario-campo--completo-anidado formulario-campo--centrado">
+                <button type="submit" class="formulario-boton">ENVIAR MENSAJE</button>
+              </div>
+            </div>
+          </div>
+        </form>
+      </div>
+    </section>
+
     <section class="ads2">
       <p class="title">
         Más publicidad! <strong>SUBSCRÍBETE A NUESTRA NEWSLETTER</strong> &nbsp;
-        <a href="#" style="text-transform: lowercase;">Click aquí</a>
+        <a href="#" style="text-transform: lowercase">Click aquí</a>
       </p>
     </section>
 
@@ -327,7 +522,7 @@
           <h3>Contacto y Preguntas Frecuentes</h3>
           <ul>
             <li><a href="#">+ (34) 666 666 666</a></li>
-            <li><a href="#">FORMULARIO DE CONTACTO</a></li>
+            <li><a href="#formulario">FORMULARIO DE CONTACTO</a></li>
             <li><a href="#">PREGUNTAS FRECUENTES</a></li>
             <li><a href="#">LIBRO DE RECLAMACIONES</a></li>
             <li><a href="#">CONOCE NUESTRA MANERA DE TRABAJAR</a></li>
@@ -356,7 +551,7 @@
         <div class="footer-col-4">
           <h3>Contacto</h3>
           <ul>
-            <li><a href="#">FORMULARIO DE CONTACTO</a></li>
+            <li><a href="#formulario">FORMULARIO DE CONTACTO</a></li>
           </ul>
         </div>
       </div>
@@ -403,7 +598,7 @@
         </div>
 
         <div class="footer-col-8">
-          <a href="#">
+          <a href="#inicio">
             <img
               src="/assets/images/logos/Recurso 14.svg"
               alt="Logo Impacta"
